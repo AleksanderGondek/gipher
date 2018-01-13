@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Flurl;
 using Flurl.Http;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace gipher.Giphy
 {
@@ -25,12 +25,11 @@ namespace gipher.Giphy
             {
                 var request = GetGiphySearchRequest(text);
                 var response = await request.GetJsonAsync();
-
-                var responseData = response.data;
-                var anyImagesFound = (responseData as IList ?? new List<object>()).Count > 0;
-                url = anyImagesFound ? 
-                    response.data.images.original.url  : 
-                    "Sorry, I have been unable to find any images.";
+                url = response.data.images.original.url;
+            }
+            catch (RuntimeBinderException)
+            {
+                url = "Sorry, I have been unable to find any images.";
             }
             catch (Exception error)
             {
