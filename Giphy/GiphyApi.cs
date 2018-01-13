@@ -38,7 +38,7 @@ namespace gipher.Giphy
         {
             return new Url(GiphyBaseApiUrl)
                 .AppendPathSegments(new List<string>() {"v1", "gifs", "translate"})
-                .SetQueryParams(new {api_key = _apiKey, s = text});
+                .SetQueryParams(new {api_key = _apiKey, s = text, rating = "R"});
         }
     }
 }
