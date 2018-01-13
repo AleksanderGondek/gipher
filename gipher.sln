@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gipher", "gipher.csproj", "{E0C6AAAF-82CB-475B-ADA3-4C1D1CA04101}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0C6AAAF-82CB-475B-ADA3-4C1D1CA04101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C6AAAF-82CB-475B-ADA3-4C1D1CA04101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C6AAAF-82CB-475B-ADA3-4C1D1CA04101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C6AAAF-82CB-475B-ADA3-4C1D1CA04101}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {839EC864-DCC5-4115-9B09-E9963DC9EC1B}
+	EndGlobalSection
+EndGlobal
