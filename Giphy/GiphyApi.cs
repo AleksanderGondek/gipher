@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -24,7 +25,12 @@ namespace gipher.Giphy
             {
                 var request = GetGiphySearchRequest(text);
                 var response = await request.GetJsonAsync();
-                url = response.data.images.original.url;
+
+                var responseData = response.data;
+                var anyImagesFound = (responseData as IList ?? new List<object>()).Count > 0;
+                url = anyImagesFound ? 
+                    response.data.images.original.url  : 
+                    "Sorry, I have been unable to find any images.";
             }
             catch (Exception error)
             {
