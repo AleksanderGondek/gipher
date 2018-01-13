@@ -26,6 +26,8 @@ namespace gipher.Dialogs
 
             var requesterName = activity.From.Name;
             var queryText = activity.RemoveMentionText(botHandle);
+            queryText = queryText.Replace($"@{botHandle} ", "");
+
             var imageUrl = await giphyApi.GetImageUrlFromText(queryText);
 
             var responseText = $"{requesterName} searched for '{queryText}' \n\n {imageUrl}";
